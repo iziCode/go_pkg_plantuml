@@ -3,8 +3,3 @@
 .vscode
 .idea
 .vs
-
-# project files
-production.env
-src/frontend/node_modules
-
