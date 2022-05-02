@@ -1,0 +1,10 @@
+# system, ide files
+.DS_Store
+.vscode
+.idea
+.vs
+
+# project files
+production.env
+src/frontend/node_modules
+
