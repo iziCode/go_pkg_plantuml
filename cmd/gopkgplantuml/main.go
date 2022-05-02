@@ -66,7 +66,7 @@ func generatePlantUML(pkgRawData []*PkgRawData) {
 			}
 			for _, i := range pkgRawDatum1.Imports {
 				if i == pkgRawDatum2.ImportPath {
-					fileContent += `"` + pkgRawDatum1.Name + `" --|> "` + pkgRawDatum2.Name + `"` + "\n"
+					fileContent += `"` + pkgRawDatum1.Name + `" --> "` + pkgRawDatum2.Name + `"` + "\n"
 				}
 			}
 
