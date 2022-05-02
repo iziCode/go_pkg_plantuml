@@ -1,3 +1,3 @@
-module github.com/iziCode/go_pkg_plantuml
+module github.com/iziCode/gopkgplantuml
 
 go 1.18
