@@ -1,8 +1,5 @@
 #!/usr/bin/make
 
-include production.env
-export
-
 .DEFAULT_GOAL := help
 
 help: ## Show this help
@@ -11,20 +8,6 @@ help: ## Show this help
 		Usage example:\n\
 	    	make run"
 
+run:
+	go list -f "{{.Name}}__{{.ImportPath}}__{{.Imports}}" ./... > pkg_list.txt
 
-# === FRONTEND ===
-
-frontend-dep: ## install/update npm packages
-	cd ./src/frontend && npm install
-
-frontend-dev: ## run dev server
-	cd ./src/frontend && npm run serve
-
-frontend-build: ## build static files into backend service
-	cd ./src/frontend && npm run build
-
-frontend-lint: ## build static files into backend service
-	cd ./src/frontend && npm run lint
-
-frontend-vue-ui: ## start vue ui
-	cd ./src/frontend && vue ui
