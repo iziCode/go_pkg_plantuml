@@ -1,0 +1,23 @@
+@startuml
+
+namespace main{}
+namespace api{}
+namespace config{}
+namespace csv{}
+namespace database{}
+namespace logger{}
+namespace model{}
+namespace queue{}
+
+"main" --> "database"
+"main" --> "logger"
+"main" --> "queue"
+"database" --> "config"
+"database" --> "model"
+"logger" --> "config"
+"queue" --> "api"
+"queue" --> "csv"
+"queue" --> "database"
+"queue" --> "model"
+
+@enduml
